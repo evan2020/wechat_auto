@@ -8,26 +8,15 @@ bot = Bot(cache_path=True)
 # friends_total=bot.friends().stats_text()
 # print(friends_total)
 
-# 获取微信的好友
-friends_num=bot.friends()
-print("获取的微信好友", friends_num)
-friend_total = 0
-for friend in friends_num:
-    friend_total=friend_total+1
-print("当前的好友总数", friend_total)
+# 获取微信好友总数
+wx_friends=bot.friends()
+print("获取到的微信好友数据为", len(wx_friends))
 
 # 获取微信群的总数
-groups_num=bot.groups()
-print("获取的微信群", groups_num)
-group_total = 0
-for group in groups_num:
-    group_total=group_total+1
-print("当前的微信群", group_total)
+wx_groups=bot.groups()
+print("获取到的微信群数据为", len(wx_groups),wx_groups)
 
 # 获取微信公众号的总数
-mps_num=bot.mps()
-print("获取的微信公众号", mps_num)
-mp_total = 0
-for group in mps_num:
-    mp_total=mp_total+1
-print("当前的微信公众号", mp_total)
+wx_mps=bot.mps()
+print("获取到的微信公众号数据为", len(wx_mps),wx_mps)
+
