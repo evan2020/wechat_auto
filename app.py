@@ -13,6 +13,10 @@ def auto_accept_friends(msg):
         msg.chat.send("呵呵")
     elif msg.text == "0":
         msg.chat.send("回复1获取更多内容")
+    elif msg.text == "1":
+        msg.chat.send("邀请你进入某个群")
+        group_select=bot.groups().search("test")[0]
+        group_select.add_members(msg.chat, use_invitation=True)
 # 获取简单的好友统计
 # friends_total=bot.friends().stats_text()
 # print(friends_total)
